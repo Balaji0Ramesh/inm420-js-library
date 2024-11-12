@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JS Libraries | INM420 | Balaji Ramesh</title>
+        <link rel="shortcut icon" href="./assets/img/js-icon.webp" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
+        <!-- 01 Animate On Scroll CSS (https://michalsnik.github.io/aos/) -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+        <!-- 02 Google AR Viewer "Model Viewer" -->       
+        <!-- 03 Isotope Js (https://isotope.metafizzy.co/) -->
+        <!-- 04 Swiper's CSS (https://swiperjs.com/get-started) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <!-- 05 Cart Local Storage () -->
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <nav class="navbar bg-body-tertiary fixed-top">
+                <div class="container-xl">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-label="Toggle navigation">
+                        <span class="bi bi-list-nested"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Furniture Store</a>
+                    <div class="">
+                        <a class="btn btn-block btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas" aria-controls="cartCanvas" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="bi bi-cart3"> Cart</span>
+                        </a>
+                    </div>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarMenu" aria-labelledby="navbarMenuLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="navbarMenuLabel">Menu</h5>
+                            <button type="button" class="btn-close bg-secondary bg-opacity-25" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <!-- Menu Offcanvas -->
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="#">Products</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Cart Offcanvas -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas" >
+                <div class="offcanvas-header border-bottom border-1 rounded-start-2">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
+                    <button type="button" class="btn-close bg-secondary bg-opacity-25" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body border-bottom border-1 rounded-bottom-5 shadow">
+                    <table class="table">
+                        <tbody class="cart">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="offcanvas-footer pt-3">
+                    <div class="row justify-content-center align-items-center px-2">
+                        <div class="col">
+                            <h4>Total:</h4>
+                        </div>
+                        <div class="col">
+                            <h4 class="total text-end">$0</h4>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="p-2">
+                        <button class="btn btn-lg btn-primary w-100" disabled>Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container-xl mt-5 pt-2">
+            <!-- Hero Section -->
+            <h3 class="text-center text-secondary mt-5 mb-0">Define Your Space with</3>
+            <h1 class="display-1 fw-bold luxory text-center text-secondary">Luxury & Comfort</h1>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="./assets/img/Chloe.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="./assets/img/friday-night.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="./assets/img/ottoman-stool.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="./assets/img/Chloe.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="./assets/img/friday-night.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="./assets/img/ottoman-stool.jpg" />
+                    </div>
+                </div>
+                <div class="d-none d-md-block">
+                    <div class="swiper-button-next "></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            <!-- Deals Section -->
+            <section class="container my-5">
+                <div class="text-center mb-4">
+                    <h2>Why Our Deals Are Best</h2>
+                    <p class="text-muted">Elevate your everyday beauty routine with Eleanor lipsticks, where artistry meets elegance. Our lipsticks are more than just makeup; they're an expression of your unique style.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 text-center">
+                        <div class="icon-box mx-auto mt-3">
+                            <i class="bi bi-clouds"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Comfortable Seating</h5>
+                            <p class="card-text">Our furniture is designed with your comfort in mind. With ergonomic features, plush cushioning, and lumbar support, you'll enjoy hours of relaxation.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 text-center">
+                        <div class="icon-box mx-auto mt-3">
+                            <i class="bi bi-wrench-adjustable-circle"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Quality Craftsmanship</h5>
+                            <p class="card-text">We take pride in the quality of our furniture. Each piece is crafted with precision using durable materials, ensuring longevity, reliability, and durability.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 text-center">
+                        <div class="icon-box mx-auto mt-3">
+                            <i class="bi bi-pencil-square"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Stylish Designs</h5>
+                            <p class="card-text">Elevate your interior with our stylish furniture designs. From modern and minimalist to classic and elegant, we offer a variety of styles to suit your taste.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Why Choose Us Section -->
+            <section class="container my-5"> <!-- *** Animate On Scroll Implemented in this Section *** -->
+                <div class="text-center mb-4">
+                    <h2>Why Choose Us</h2>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim</p>
+                </div>
+                <div class="overflow-hidden">
+                    <div class="row align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500"> 
+                        <div class="col-md-6 text-center">
+                            <img src="./assets/img/quality-craftmanship.jpg" alt="Comfortable Chair" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Quality Craftsmanship</h3>
+                            <p>At Luxora, we take pride in our commitment to quality. Our furniture is meticulously crafted by skilled artisans using the finest materials. We believe that every piece should be an investment that lasts for generations.</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center"  data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="col-md-6 order-md-2 text-center">
+                            <img src="./assets/img/style-for-every-home.jpg" alt="Stylish Chair" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6 order-md-1">
+                            <h3>Style for Every Home</h3>
+                            <p>Our diverse range of styles ensures that there's something for every home. Whether your taste is classic, modern, or somewhere in between, we offer furniture that complements your unique style.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Featured Products Section -->
+            <section class="container my-5" data-aos="zoom-in" data-aos-duration="1000"> <!-- *** Animate On Scroll Implemented in this Section *** -->
+                <div class="text-center mb-4">
+                    <h2>Our Featured Products</h2>
+                    <p class="text-muted">Discover the epitome of relaxation with our Furniture. This chair boasts ergonomic design, plush cushioning, and premium upholstery for ultimate comfort.</p>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card border border-0 shadow">
+                            <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                <img src="./assets/img/cherner-children-chair.jpg" class="card-img-top" alt="Cherner Children's Chair">
+                                <div class="card-body">
+                                    <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                    <h5 class="card-title">Cherner Childrens | Chairs</h5>
+                                    <p class="card-text text-muted">Manufacturer | Cherner</p>
+                                    <p class="fw-bold">$395.00</p>
+                                </div>
+                            </div>
+                            <div class="p-2">
+                                <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 1, img: 'cherner-children-chair.jpg', name: 'Cherner Childrens | Chairs', price: 395})">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4 mb-4">
+                        <div class="card border border-0 shadow">
+                            <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                <img src="./assets/img/barcode-lantern.jpg" class="card-img-top" alt="Barcode Lantern">
+                                <div class="card-body">
+                                    <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                    <h5 class="card-title">Barcode | Lantern</h5>
+                                    <p class="card-text text-muted">Manufacturer | Varaschin</p>
+                                    <p class="fw-bold">$445.00</p>
+                                </div>
+                            </div>
+                            <div class="p-2">
+                                <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 2, img: 'barcode-lantern.jpg', name: 'Barcode | Lantern', price: 445})">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4 mb-4">
+                        <div class="card border border-0 shadow">
+                            <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                <img src="./assets/img/riki-windsor-armchair.jpg" class="card-img-top" alt="Riki Windsor Armchair">
+                                <div class="card-body">
+                                    <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                    <h5 class="card-title">Riki Windsor | Armchair</h5>
+                                    <p class="card-text text-muted">Manufacturer | CondeHouse</p>
+                                    <p class="fw-bold">$500.00</p>
+                                </div>
+                            </div>
+                            <div class="p-2">
+                                <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 3, img: 'riki-windsor-armchair.jpg', name: 'Riki Windsor | Armchair', price: 395})">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Products (Filtered by Category) -->
+            <section id="shopByCategory" class="container my-5" data-aos="zoom-in-right" data-aos-duration="1000"> <!-- *** Animate On Scroll Implemented in this Section *** -->
+                <div class="text-center mb-4">
+                    <h2>Shop Our Products</h2>
+                    <p class="text-muted">Elevate your living space with our collection of living room furniture. From comfortable sofas and stylish coffee tables to elegant bookshelves, our pieces are designed to enhance your relaxation and entertainment areas.</p>
+                </div>
+
+                <div class="">
+                    <div class="d-flex justify-content-center mb-4 sticky-top mt-5">
+                        <nav class="nav mt-5 bg-light rounded-pill mb-3 py-3 px-md-3 border-bottom border-1 shadow justify-content-center">
+                            <button class="btn" data-filter=".chair">Chairs</button>
+                            <button class="btn" data-filter=".stool">Stool</button>
+                            <button class="btn" data-filter=".sofa">Sofas</button>
+                            <button class="btn" data-filter=".bed">Beds</button>
+                            <button class="btn" data-filter="*">See All</button>
+                        </nav>
+                    </div>
+                    <!-- Products -->
+                    <div class="allProducts row justify-content-start align-items-center">
+                        
+                        <div class="product-item stool col-sm-6 col-md-4 col-lg-3 col-lg-4 mb-4 p-2">
+                            <div class="card border border-0 shadow">
+                                <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    <img src="./assets/img/kubrick-stool.jpg" class="card-img-top" alt="Kubrick Stool">
+                                    <div class="card-body">
+                                        <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                        <h6 class="card-title">Kubrick | Stool</h6>
+                                        <p class="card-text text-muted">Manufacturer | Benjamin Cherner</p>
+                                        <p class="fw-bold">$409.00</p>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 4, img: 'kubrick-stool.jpg', name: 'Kubrick | Stoolr', price: 409})">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-item sofa col-sm-6 col-md-4 col-lg-3 col-lg-4 mb-4 p-2">
+                            <div class="card border border-0 shadow">
+                                <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    <img src="./assets/img/aura-280.jpg" class="card-img-top" alt="Aura 280 Sofa">
+                                    <div class="card-body">
+                                        <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                        <h6 class="card-title">Aura 280 | Sofa</h6>
+                                        <p class="card-text text-muted">Manufacturer | Bensen</p>
+                                        <p class="fw-bold">$1199.00</p>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 5, img: 'aura-280.jpg', name: 'Aura 280 | Sofa', price: 1199})">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item chair col-sm-6 col-md-4 col-lg-3 col-lg-4 mb-4 p-2">
+                            <div class="card border border-0 shadow">
+                                <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    <img src="./assets/img/cherner-children-chair.jpg" class="card-img-top" alt="Cherner Children's Chair">
+                                    <div class="card-body">
+                                        <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                        <h6 class="card-title">Cherner Childrens | Chair</h6>
+                                        <p class="card-text text-muted">Manufacturer | Benjamin Cherner</p>
+                                        <p class="fw-bold">$599.00</p>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 6, img: 'cherner-children-chair.jpg', name: 'Cherner Childrens | Chair', price: 599})">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item bed col-sm-6 col-md-4 col-lg-3 col-lg-4 mb-4 p-2">
+                            <div class="card border border-0 shadow">
+                                <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    <img src="./assets/img/merkurio-double.jpg" class="card-img-top" alt="Merkurio Double Bed">
+                                    <div class="card-body">
+                                        <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                        <h6 class="card-title">Merkurio Double | Bed</h6>
+                                        <p class="card-text text-muted">Manufacturer | Flou</p>
+                                        <p class="fw-bold">$1299.00</p>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 7, img: 'merkurio-double.jpg', name: 'Merkurio Double | Bed', price: 1299})">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item chair col-sm-6 col-md-4 col-lg-3 col-lg-4 mb-4 p-2">
+                            <div class="card border border-0 shadow">
+                                <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    <img src="./assets/img/cleo-teak-padded-tub-chair.jpg" class="card-img-top" alt="Cleo Teak Padded Tub Chair">
+                                    <div class="card-body">
+                                        <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                        <h6 class="card-title">Cleo-Teak-Padded-Tub | Chair</h6>
+                                        <p class="card-text text-muted">Manufacturer | Marco</p>
+                                        <p class="fw-bold">$450.00</p>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 8, img: 'cleo-teak-padded-tub-chair.jpg', name: 'Cleo-Teak-Padded-Tub | Chair', price: 450})">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item bed col-sm-6 col-md-4 col-lg-3 col-lg-4 mb-4 p-2">
+                            <div class="card border border-0 shadow">
+                                <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    <img src="./assets/img/Chloe.jpg" class="card-img-top" alt="Chloe Bed">
+                                    <div class="card-body">
+                                        <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                        <h6 class="card-title">Chloe | Bed</h6>
+                                        <p class="card-text text-muted">Manufacturer | Poliform</p>
+                                        <p class="fw-bold">$1899.00</p>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 9, img: 'Chloe.jpg', name: 'Chloe | Bed', price: 1899})">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item stool col-sm-6 col-md-4 col-lg-3 col-lg-4 mb-4 p-2">
+                            <div class="card border border-0 shadow">
+                                <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    <img src="./assets/img/ottoman-stool.jpg" class="card-img-top" alt="Ottoman Stool">
+                                    <div class="card-body">
+                                        <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                        <h6 class="card-title">Ottoman | Stool</h6>
+                                        <p class="card-text text-muted">Manufacturer | Benjamin Cherner</p>
+                                        <p class="fw-bold">$395.00</p>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 10, img: 'ottoman-stool.jpg', name: 'Ottoman | Stool', price: 395})">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item bed col-sm-6 col-md-4 col-lg-3 col-lg-4 mb-4 p-2">
+                            <div class="card border border-0 shadow">
+                                <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    <img src="./assets/img/friday-night.jpg" class="card-img-top" alt="Friday Night Bed">
+                                    <div class="card-body">
+                                        <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                        <h6 class="card-title">Friday Night | Bed</h6>
+                                        <p class="card-text text-muted">Manufacturer | Zeitraum</p>
+                                        <p class="fw-bold">$2699.00</p>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 11, img: 'friday-night.jpg', name: 'Friday Night | Bed', price: 2699})">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item sofa col-sm-6 col-md-4 col-lg-3 col-lg-4 mb-4 p-2">
+                            <div class="card border border-0 shadow">
+                                <div class="" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    <img src="./assets/img/ethos.jpg" class="card-img-top" alt="Ethos Sofa">
+                                    <div class="card-body">
+                                        <p class="text-secondary text-end small"><span class="bi bi-star-fill text-warning"></span> 4.8 (8.5 Reviews)</p>
+                                        <h6 class="card-title">Ethos | Sofa</h6>
+                                        <p class="card-text text-muted">Manufacturer | Cassina</p>
+                                        <p class="fw-bold">$1699.00</p>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-outline-secondary w-100" type="button" onClick="cartLS.add({id: 12, img: 'ethos.jpg', name: 'Ethos | Sofa', price: 1699})">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- Product Modal -->
+            <div class="modal fade bg-light" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header container-xl">
+                            <button class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close" ><i class="bi bi-arrow-left"></i> Back</button>
+                        </div>
+                        <div class="modal-body container-xl">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-5">
+                                    <!-- 3D Model -->
+                                    <div class="ratio ratio-1x1 rounded-5 bg-light">
+                                        <model-viewer id="woodenChair" class="w-100 rounded-5" camera-orbit="270deg 90deg 3m" alt="Wooden Chari" src="./assets/model/chair.glb" poster="./assets/img/chair-360.jpg" ar shadow-intensity="1" camera-controls touch-action="pan-y" xr-environment scale=".25 .25 .25"></model-viewer>
+                                    </div>
+                                    <!-- Alert -->
+                                    <div class="alert alert-warning fs-5 d-none d-md-block" role="alert">
+                                        <i class="bi bi-boxes"></i> Visit from mobile device to view this product in your space.
+                                    </div>
+                                </div>
+                                <!-- Product Details -->
+                                <div class="col pt-5">
+                                    <h1>Krino chair | Chairs</h1>
+                                    <p>Chairs from <b class="text-muted">Tagged De-code</b></p>
+                                    <p><b>Category</b> <i class="text-primary">Chairs</i></p>
+                                    <h4>$360.00</h4>
+                                    <div class="product-details">
+                                        <h2>Product Details</h2>
+                                        <ul>
+                                            <li>Category: Seating - Chairs</li>
+                                            <li>Base: Solid Wood</li>
+                                            <li>Design: Open base - without armrests</li>
+                                            <li>Upholstery: Seat and backrest upholstered</li>
+                                            <li>Base Type: 4-leg base</li>
+                                            <li>Material: Wood - Solid wood</li>
+                                            <li>Usage: Residential</li>
+                                        </ul>
+                                    </div>
+                                    <div class="sticky-bottom">
+                                        <button class="btn btn-outline-primary w-100" type="button" onClick="cartLS.add({id: 15, img: 'chair-360.jpg', name: 'Krino chair | Chairs', price: 360})">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <h4 class="mt-4">Product Description:</h4>
+                            <h1>Krino Chair</h1>
+                            <p>The <strong>Krino Chair</strong> is a stylish and versatile accent chair that blends seamlessly with various interior designs, making it an excellent choice for both modern and classic spaces. It is part of the <em>Chairs</em> collection from Tagged De-code, known for its commitment to high-quality materials and refined craftsmanship.</p>
+                            
+                            <p>This chair features an open base design, offering a clean, contemporary look that enhances any room without overwhelming the space. Its four-leg base is made of solid wood, ensuring durability and stability while adding a natural, warm touch to your decor. The base is carefully constructed to provide reliable support for years, emphasizing the beauty of wood’s natural grain.</p>
+                            
+                            <p>The seat and backrest are generously upholstered in soft fabrics, adding a layer of comfort while maintaining a sleek and sophisticated appearance. The absence of armrests provides an open, airy feel, making the chair ideal for a variety of seating arrangements. The upholstered surfaces are designed for both style and comfort, making the Krino chair suitable for extended use in living rooms, bedrooms, or other residential spaces.</p>
+                            
+                            <p>With its seamless combination of materials, solid wood base, and upholstered seating, the Krino chair is a statement piece that balances elegance with comfort. Whether used as an accent chair or as part of a seating arrangement, it is a versatile addition to any room.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-dark container-fluid py-5">
+            <p class="text-center text-light small mb-0">INM420 | JS Library | Balaji Ramesh</p>
+        </footer>
+        
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script  src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- 01 Animate On Scroll JS (https://michalsnik.github.io/aos/) -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- 02 Google AR Viewer "Model Viewer" (https://modelviewer.dev/)-->
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+        <!-- 03 Isotope Js (https://isotope.metafizzy.co/) -->
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <!-- 04 Swiper Js  -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!--  -->
+        <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js" type="text/javascript"></script>
+        <!-- Custom Code -->
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>

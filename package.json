@@ -1,0 +1,16 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+    },
+  "keywords": [],
+  "author": "Balaji Ramesh",
+  "private": true,
+  "license": "ISC",
+  "description": "Assignment template",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
